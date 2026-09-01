@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Minakshi Aronai Shop — Traditional, Authentic Bodo weaves and crafts.">
+  <title>Minakshi Aronai Shop | Traditional Bodo Weaves</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="top-pattern" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Minakshi Aronai Shop home">
+      <span class="aronai-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+      <span class="brand-copy"><strong>Minakshi</strong><b>ARONAI SHOP</b><small>Traditional. Authentic. Bodo.</small></span>
+    </a>
+
+    <div class="search-wrap">
+      <input id="search" aria-label="Search products" placeholder="Search for aronai, dress, stole..." oninput="render()">
+      <button aria-label="Search" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">⌕</button>
+    </div>
+
+    <nav class="header-actions" aria-label="Main navigation">
+      <a href="index.html"><span>⌂</span>Home</a>
+      <a href="#products"><span>▣</span>Shop</a>
+      <a href="#about"><span>ⓘ</span>About Us</a>
+      <a href="#contact"><span>⌕</span>Contact</a>
+      <button class="cart-pill" onclick="cart()" aria-label="Open cart"><span>🛒</span><b>My<br>Cart</b><em id="count">0</em></button>
+    </nav>
+  </header>
+
+  <nav class="category-bar" aria-label="Product categories">
+    <a class="all-categories" href="#products">☰ &nbsp;All Categories</a>
+    <a href="#products" onclick="filterCategory('Aronai')">Aronai</a>
+    <a href="#products" onclick="filterCategory('Dokhona')">Dokhona</a>
+    <a href="#products" onclick="filterCategory('Stole')">Stole</a>
+    <a href="#products" onclick="filterCategory('Dress Material')">Dress Material</a>
+    <a href="#products" onclick="filterCategory('Accessories')">Accessories</a>
+    <a href="#products" onclick="filterCategory('New Arrivals')">New Arrivals</a>
+  </nav>
+
+  <main>
+    <section class="hero" aria-label="Aronai collection">
+      <button class="hero-arrow left" aria-label="Previous">‹</button>
+      <div class="hero-copy">
+        <span class="eyebrow">Traditional Bodo Weaves</span>
+        <h1>ARONAI</h1>
+        <div class="ornament">◆ ── ❖ ── ◆</div>
+        <h2>Woven with Culture, Made with Pride.</h2>
+        <button class="primary" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Shop Now <span>→</span></button>
+      </div>
+      <button class="hero-arrow right" aria-label="Next">›</button>
+      <div class="hero-dots"><i class="active"></i><i></i><i></i></div>
+    </section>
+
+    <section class="trust-strip" aria-label="Shopping benefits">
+      <div><span>▱</span><p><b>Free Shipping</b><small>On all orders above ₹999</small></p></div>
+      <div><span>♢</span><p><b>Secure Payment</b><small>100% secure payment</small></p></div>
+      <div><span>◎</span><p><b>Premium Quality</b><small>Best quality products</small></p></div>
+      <div><span>♧</span><p><b>Customer Support</b><small>We are here to help</small></p></div>
+    </section>
+
+    <section id="products" class="products-section">
+      <div class="section-heading">
+        <div><span>OUR COLLECTION</span><h2>Our Popular Products</h2></div>
+        <button onclick="clearCategory()">View All Products</button>
+      </div>
+      <div id="grid" class="product-grid"></div>
+    </section>
+  </main>
+
+  <aside id="drawer" class="drawer" aria-label="Shopping cart">
+    <div class="drawer-head"><h2>Your Cart</h2><button onclick="cart()">×</button></div>
+    <div id="items"></div>
+    <h3 id="total">Total: ₹0</h3>
+    <button class="pay" onclick="checkout()">Pay Securely Online</button>
+    <p class="note">Cash on Delivery is not available.</p>
+  </aside>
+  <div id="shade" class="shade" onclick="cart()"></div>
+
+  <footer id="contact">
+    <div class="footer-pattern" aria-hidden="true"></div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <span class="aronai-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+          <span class="brand-copy"><strong>Minakshi</strong><b>ARONAI SHOP</b><small>Traditional. Authentic. Bodo.</small></span>
+        </a>
+        <div class="socials"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="WhatsApp">◔</a></div>
+      </div>
+      <div><h3>Quick Links</h3><a href="index.html">Home</a><a href="#products">Shop</a><a href="#about">About Us</a><a href="#contact">Contact Us</a><a href="admin.html">My Account</a></div>
+      <div><h3>Customer Care</h3><a href="#">Shipping Policy</a><a href="#">Return &amp; Refund</a><a href="#">Terms &amp; Conditions</a><a href="#">Privacy Policy</a><a href="#">FAQ</a></div>
+      <div id="about"><h3>About Us</h3><p>Minakshi Aronai Shop is dedicated to preserving and promoting the rich heritage of Bodo traditional weaves and crafts.</p></div>
+      <div><h3>Help Line</h3><p class="hotline"><span>♧</span> <a href="tel:9101568209">9101568209</a></p><p>Mon - Sat: 9:00 AM - 6:00 PM</p><p>We are here to help you!</p></div>
+    </div>
+    <div class="copyright">© 2026 Minakshi Aronai Shop. All Rights Reserved.</div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
